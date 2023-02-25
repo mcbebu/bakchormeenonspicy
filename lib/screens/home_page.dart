@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bak/screens/questionaire.dart';
 import 'package:flutter_bak/theme/colors/light_colors.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter_bak/widgets/task_column.dart';
 import 'package:flutter_bak/widgets/active_project_card.dart';
@@ -117,19 +119,19 @@ class HomePage extends StatelessWidget {
                           horizontal: 20.0, vertical: 10.0),
                       child: Column(
                         children: <Widget>[
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              subheading('My Tasks'),
-                            ],
-                          ),
                           SizedBox(height: 15.0),
                           TaskColumn(
                             icon: Icons.alarm,
                             iconBackgroundColor: LightColors.kRed,
                             title: 'To Do',
                             subtitle: '5 tasks now. 1 started',
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Questionaire()),
+                              );
+                            },
                           ),
                           SizedBox(
                             height: 15.0,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
+import '../theme/colors/light_colors.dart';
+
 class ActiveProjectsCard extends StatelessWidget {
   final Color? cardColor;
   final double loadingPercent;
@@ -23,7 +25,7 @@ class ActiveProjectsCard extends StatelessWidget {
         padding: EdgeInsets.all(15.0),
         height: 200,
         decoration: BoxDecoration(
-          color: cardColor,
+          color: ColourCat(subtitle),
           borderRadius: BorderRadius.circular(40.0),
         ),
         child: Column(
@@ -35,7 +37,7 @@ class ActiveProjectsCard extends StatelessWidget {
               child: CircularPercentIndicator(
                 animation: true,
                 radius: 75.0,
-                percent: loadingPercent,
+                percent: loadingPercent < 0 ? 0.0 : loadingPercent,
                 lineWidth: 5.0,
                 circularStrokeCap: CircularStrokeCap.round,
                 backgroundColor: Colors.white10,
@@ -61,8 +63,8 @@ class ActiveProjectsCard extends StatelessWidget {
                 Text(
                   subtitle,
                   style: TextStyle(
-                    fontSize: 12.0,
-                    color: Colors.white54,
+                    fontSize: 14.0,
+                    color: Colors.white,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -72,5 +74,15 @@ class ActiveProjectsCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color? ColourCat(String level) {
+    if (level == 'Low') {
+      return LightColors.kGreen;
+    } else if (level == 'Medium') {
+      return LightColors.kDarkYellow;
+    } else if (level == 'High') {
+      return LightColors.kRed;
+    }
   }
 }
