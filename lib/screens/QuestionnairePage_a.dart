@@ -10,7 +10,7 @@ class QuestionnairePage_a extends StatefulWidget {
 }
 
 class _QuestionnairePageState_a extends State<QuestionnairePage_a> {
-  List<int> _selectedValues = List<int>.filled(9, -1);
+  List<int> _selectedValues = List<int>.filled(9, 2);
   int _calculateSum() {
     int sum = _selectedValues.reduce((value, element) => value + element);
     return sum;
@@ -27,7 +27,7 @@ class _QuestionnairePageState_a extends State<QuestionnairePage_a> {
             20,
             60,
             20,
-            0,
+            20,
           ),
           child: Column(
             children: <Widget>[

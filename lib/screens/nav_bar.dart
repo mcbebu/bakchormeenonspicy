@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bak/screens/ChatPage.dart';
 import 'package:flutter_bak/screens/ForumDiscussion.dart';
 import 'package:flutter_bak/screens/home_page.dart';
+import 'package:flutter_bak/screens/points_redeem.dart';
 import 'package:flutter_bak/screens/questionaire.dart';
 import 'package:flutter_bak/theme/colors/light_colors.dart';
 import 'package:flutter_bak/widgets/top_container.dart';
@@ -31,9 +33,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   final List<Widget> _pages = [
     // List of pages to show
     HomePage(),
-    Questionaire(),
+    ChatPage(),
     ForumDiscussion(),
-    Questionaire(),
+    PointsRedeemPage(),
   ];
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -51,7 +53,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
+      'Index 3: Redeem',
       style: optionStyle,
     ),
   ];
@@ -92,8 +94,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             backgroundColor: LightColors.kLightYellow2,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.redeem),
+            label: 'Redeem',
             backgroundColor: LightColors.kLightYellow2,
           ),
         ],

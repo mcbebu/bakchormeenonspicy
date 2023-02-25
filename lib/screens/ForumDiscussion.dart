@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bak/screens/create_new_feedback.dart';
 import 'package:flutter_bak/screens/questionaire.dart';
 import 'package:flutter_bak/theme/colors/light_colors.dart';
 import 'package:flutter_bak/widgets/task_column.dart';
@@ -42,7 +43,8 @@ class _ForumDiscussion extends State<ForumDiscussion> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Questionaire()),
+                                  builder: (context) =>
+                                      CreateNewFeedbackPage()),
                             );
                           },
                           child: Icon(Icons.add,

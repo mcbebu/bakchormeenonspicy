@@ -17,7 +17,7 @@ class QuestionnairePage_c extends StatefulWidget {
 }
 
 class _QuestionnairePageState_c extends State<QuestionnairePage_c> {
-  List<int> _selectedValues = List<int>.filled(5, 0);
+  List<int> _selectedValues = List<int>.filled(5, 4);
 
   Object? get qa => null;
 

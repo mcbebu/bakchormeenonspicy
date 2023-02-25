@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bak/screens/home_page.dart';
+import 'package:flutter_bak/screens/nav_bar.dart';
 import 'package:flutter_bak/theme/colors/light_colors.dart';
 import 'package:flutter_bak/widgets/task_container.dart';
 import 'package:flutter_bak/widgets/back_button.dart';
@@ -117,7 +118,7 @@ class Summary extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HomePage(),
+                                builder: (context) => NavBar(),
                               ),
                             );
                           },

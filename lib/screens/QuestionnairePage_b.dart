@@ -15,16 +15,13 @@ class QuestionnairePage_b extends StatefulWidget {
 }
 
 class _QuestionnairePageState_b extends State<QuestionnairePage_b> {
-  List<int> _selectedValues = List<int>.filled(8, -1);
+  List<int> _selectedValues = List<int>.filled(8, 3);
 
   Object? get qa => null;
 
   int _calculateSum() {
     int sum = _selectedValues.reduce((value, element) => value + element);
     return sum;
-    // print('Sum of answers: $sum');
-    // int totalSum = sum + widget.previousSum;
-    // print('Total sum: $totalSum');
   }
 
   @override
