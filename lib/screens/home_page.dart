@@ -42,121 +42,142 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: LightColors.kLightYellow,
       body: SafeArea(
-        child: Expanded(
-          child: Column(
-            children: <Widget>[
-              TopContainer(
-                height: 200,
-                width: width,
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 0, vertical: 0.0),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            CircularPercentIndicator(
-                              radius: 90.0,
-                              lineWidth: 5.0,
-                              animation: true,
-                              percent: 0.75,
-                              circularStrokeCap: CircularStrokeCap.round,
-                              progressColor: LightColors.kRed,
-                              backgroundColor: LightColors.kDarkYellow,
-                              center: CircleAvatar(
-                                backgroundColor: LightColors.kBlue,
-                                radius: 35.0,
-                                backgroundImage: AssetImage(
-                                  'assets/images/avatar.png',
-                                ),
+        child: Column(
+          children: <Widget>[
+            TopContainer(
+              height: 200,
+              width: width,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 0, vertical: 0.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          CircularPercentIndicator(
+                            radius: 90.0,
+                            lineWidth: 5.0,
+                            animation: true,
+                            percent: 0.75,
+                            circularStrokeCap: CircularStrokeCap.round,
+                            progressColor: LightColors.kRed,
+                            backgroundColor: LightColors.kDarkYellow,
+                            center: CircleAvatar(
+                              backgroundColor: LightColors.kBlue,
+                              radius: 35.0,
+                              backgroundImage: AssetImage(
+                                'assets/images/avatar.png',
                               ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                  child: Text(
-                                    'Jeremy Smith',
-                                    textAlign: TextAlign.start,
-                                    style: TextStyle(
-                                      fontSize: 22.0,
-                                      color: LightColors.kDarkBlue,
-                                      fontWeight: FontWeight.w800,
-                                    ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                child: Text(
+                                  'Jeremy Smith',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                    fontSize: 22.0,
+                                    color: LightColors.kDarkBlue,
+                                    fontWeight: FontWeight.w800,
                                   ),
                                 ),
-                                Container(
-                                  child: Text(
-                                    'Delivery Driver',
-                                    textAlign: TextAlign.start,
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      color: Colors.black45,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                              ),
+                              Container(
+                                child: Text(
+                                  'Delivery Driver',
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.black45,
+                                    fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                              ],
-                            )
-                          ],
-                        ),
-                      )
-                    ]),
-              ),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        color: Colors.transparent,
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        child: Column(
-                          children: <Widget>[
-                            SizedBox(height: 15.0),
-                            TaskColumn(
-                              icon: Icons.alarm,
-                              iconBackgroundColor: LightColors.kRed,
-                              title: 'To Do',
-                              subtitle: '5 tasks now. 1 started',
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Questionaire()),
-                                );
-                              },
-                            ),
-                            SizedBox(
-                              height: 15.0,
-                            ),
-                            TaskColumn(
-                              icon: Icons.blur_circular,
-                              iconBackgroundColor: LightColors.kDarkYellow,
-                              title: 'In Progress',
-                              subtitle: '1 tasks now. 1 started',
-                            ),
-                            SizedBox(height: 15.0),
-                            TaskColumn(
-                              icon: Icons.check_circle_outline,
-                              iconBackgroundColor: LightColors.kBlue,
-                              title: 'Done',
-                              subtitle: '18 tasks now. 13 started',
-                            ),
-                          ],
-                        ),
+                              ),
+                            ],
+                          )
+                        ],
                       ),
-                    ],
-                  ),
+                    )
+                  ]),
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      color: Colors.transparent,
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 10.0),
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(height: 15.0),
+                          TaskColumn(
+                            icon: Icons.alarm,
+                            iconBackgroundColor: LightColors.kRed,
+                            title: 'To Do',
+                            subtitle: '5 tasks now. 1 started',
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Questionaire()),
+                              );
+                            },
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          TaskColumn(
+                            icon: Icons.blur_circular,
+                            iconBackgroundColor: LightColors.kDarkYellow,
+                            title: 'In Progress',
+                            subtitle: '1 tasks now. 1 started',
+                          ),
+                          SizedBox(height: 15.0),
+                          TaskColumn(
+                            icon: Icons.check_circle_outline,
+                            iconBackgroundColor: LightColors.kBlue,
+                            title: 'Done',
+                            subtitle: '18 tasks now. 13 started',
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+
+    // return new Scaffold(
+    //   appBar: new AppBar(
+    //     title: new Text(
+    //       "Forum discussion",
+    //       style: new TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+    //     ),
+    //     actions: <Widget>[
+    //       new IconButton(
+    //         onPressed: () => debugPrint("add"),
+    //         icon: new Icon(Icons.add),
+    //       )
+    //     ],
+    //   ),
+    //   body: new Container(
+    //   child: new ListView.builder(
+    // itemBuilder: (context, int index) =>
+    // posts[index],
+    //     itemCount: this.posts.length,
+    //   ),
+    // ),
+    // );
