@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bak/screens/ForumDiscussion.dart';
 import 'package:flutter_bak/screens/home_page.dart';
 import 'package:flutter_bak/screens/questionaire.dart';
 import 'package:flutter_bak/theme/colors/light_colors.dart';
@@ -31,7 +32,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     // List of pages to show
     HomePage(),
     Questionaire(),
-    Questionaire(),
+    ForumDiscussion(),
     Questionaire(),
   ];
   static const TextStyle optionStyle =
