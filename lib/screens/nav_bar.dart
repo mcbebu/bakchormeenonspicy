@@ -2,19 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bak/screens/home_page.dart';
 import 'package:flutter_bak/screens/questionaire.dart';
 import 'package:flutter_bak/theme/colors/light_colors.dart';
+import 'package:flutter_bak/widgets/top_container.dart';
 
 void main() => runApp(const NavBar());
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
 
-  static const String _title = 'Flutter Code Sample';
-
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: _title,
       home: MyStatefulWidget(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -43,11 +42,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: Community',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Feedback',
       style: optionStyle,
     ),
     Text(
@@ -65,7 +64,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex],
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: _pages[_selectedIndex],
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -74,13 +81,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             backgroundColor: LightColors.kLightYellow2,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.chat),
+            label: 'Community',
             backgroundColor: LightColors.kLightYellow2,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.feedback),
+            label: 'Feedback',
             backgroundColor: LightColors.kLightYellow2,
           ),
           BottomNavigationBarItem(
