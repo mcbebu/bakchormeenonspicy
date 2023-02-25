@@ -1,6 +1,7 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_bak/screens/home_page.dart';
+import 'package:flutter_bak/screens/nav_bar.dart';
 import 'package:flutter_bak/theme/colors/light_colors.dart';
 import 'package:flutter/services.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             displayColor: LightColors.kDarkBlue,
             fontFamily: 'Poppins'),
       ),
-      home: HomePage(),
+      home: NavBar(),
       debugShowCheckedModeBanner: false,
     );
   }

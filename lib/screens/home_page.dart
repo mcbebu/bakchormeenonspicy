@@ -7,7 +7,12 @@ import 'package:flutter_bak/widgets/task_column.dart';
 import 'package:flutter_bak/widgets/active_project_card.dart';
 import 'package:flutter_bak/widgets/top_container.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   Text subheading(String title) {
     return Text(
       title,
