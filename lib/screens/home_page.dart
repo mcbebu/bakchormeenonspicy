@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                         children: <Widget>[
                           SizedBox(height: 15.0),
                           TaskColumn(
-                            icon: Icons.alarm,
+                            icon: Icons.air,
                             iconBackgroundColor: LightColors.kRed,
                             title: 'Emotional Exhaustion',
                             subtitle: '20%',
@@ -142,14 +142,14 @@ class _HomePageState extends State<HomePage> {
                             height: 15.0,
                           ),
                           TaskColumn(
-                            icon: Icons.blur_circular,
+                            icon: Icons.auto_awesome,
                             iconBackgroundColor: LightColors.kDarkYellow,
                             title: 'Personal Achievement',
                             subtitle: '80%',
                           ),
                           SizedBox(height: 15.0),
                           TaskColumn(
-                            icon: Icons.check_circle_outline,
+                            icon: Icons.battery_0_bar,
                             iconBackgroundColor: LightColors.kBlue,
                             title: 'Depersonalisation',
                             subtitle: '17%',
